@@ -15,6 +15,21 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                nvet: {
+                    dark: '#4A2810',
+                    primary: '#8E593C',
+                    light: '#E5C3A6',
+                    cream: '#F6E5D5',
+                    bg: '#FBF6EE',
+                    text: '#1C1917',
+                    green: {
+                        DEFAULT: '#4A6B53',
+                        hover: '#3C5743',
+                        light: '#E9EFEA',
+                    }
+                },
+            },
         },
     },
 
