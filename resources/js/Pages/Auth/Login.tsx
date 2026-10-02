@@ -34,43 +34,20 @@ export default function Login({
         <GuestLayout>
             <Head title="Masuk - Nvet Care" />
 
-            {/* Auth Mode Switcher Tab */}
-            <div className="mb-6 grid grid-cols-2 rounded-2xl bg-nvet-bg p-1 text-center text-sm font-medium">
-                <span className="flex items-center justify-center rounded-xl bg-nvet-dark py-2 text-white shadow-sm shadow-nvet-dark/20 font-semibold">
-                    Masuk
-                </span>
-                <Link
-                    href={route('register')}
-                    className="flex items-center justify-center rounded-xl py-2 text-stone-600 transition-colors hover:text-nvet-dark hover:bg-white/60"
-                >
-                    Daftar Akun
-                </Link>
-            </div>
-
             {/* Header Titles */}
             <div className="mb-6">
-                <h2 className="text-2xl font-bold tracking-tight text-nvet-dark">
-                    Selamat Datang Kembali 👋
+                <h2 className="font-heading text-xl tracking-tight font-bold text-nvet-dark">
+                    Selamat Datang Kembali!
                 </h2>
-                <p className="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    Masuk untuk melanjutkan konsultasi kesehatan hewan kesayangan Anda dengan dokter terpercaya.
+                <p className="font-sans mt-1 text-xs sm:text-sm text-black leading-relaxed">
+                    Masuk untuk melanjutkan konsultasi kesehatan hewan kesayangan Anda.
                 </p>
             </div>
-
-            {/* Session Status Banner */}
-            {status && (
-                <div className="mb-5 flex items-center gap-2 rounded-xl border border-nvet-green/30 bg-nvet-green-light px-4 py-3 text-xs sm:text-sm font-medium text-nvet-green">
-                    <svg className="h-4 w-4 shrink-0 text-nvet-green" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>{status}</span>
-                </div>
-            )}
 
             <form onSubmit={submit} className="space-y-4">
                 {/* Email Field */}
                 <div>
-                    <InputLabel htmlFor="email" value="Alamat Email" className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-nvet-dark" />
+                    <InputLabel htmlFor="email" value="Alamat Email :" />
 
                     <div className="relative">
                         <TextInput
@@ -97,8 +74,8 @@ export default function Login({
 
                 {/* Password Field */}
                 <div>
-                    <div className="mb-1.5 flex items-center justify-between">
-                        <InputLabel htmlFor="password" value="Kata Sandi" className="text-xs font-semibold uppercase tracking-wider text-nvet-dark" />
+                    <div className="flex items-center justify-between">
+                        <InputLabel htmlFor="password" value="Kata Sandi:"/>
                         {canResetPassword && (
                             <Link
                                 href={route('password.request')}
@@ -162,7 +139,7 @@ export default function Login({
                 {/* Submit Button */}
                 <div className="pt-2">
                     <PrimaryButton
-                        className="w-full py-3 text-sm font-semibold shadow-md shadow-nvet-dark/15"
+                        className="font-heading w-full py-3 text-lg font-semibold"
                         disabled={processing}
                     >
                         {processing ? (
@@ -174,13 +151,13 @@ export default function Login({
                                 <span>Sedang Masuk...</span>
                             </span>
                         ) : (
-                            'Masuk ke Akun Nvet Care'
+                            'Masuk'
                         )}
                     </PrimaryButton>
                 </div>
             </form>
 
-            {/* Bottom Register Prompt */}
+            {/* Bottom Register */}
             <div className="mt-6 border-t border-stone-100 pt-5 text-center text-xs sm:text-sm text-stone-600">
                 <span>Belum memiliki akun Nvet Care? </span>
                 <Link
@@ -189,14 +166,6 @@ export default function Login({
                 >
                     Daftar Sekarang Gratis
                 </Link>
-            </div>
-
-            {/* Subtle Green Feature Guarantee Note */}
-            <div className="mt-4 flex items-center justify-center gap-2 rounded-xl border border-nvet-green/20 bg-nvet-green-light/60 p-2.5 text-[11px] text-nvet-green">
-                <svg className="h-3.5 w-3.5 shrink-0 text-nvet-green" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Konsultasi online terintegrasi langsung dengan rekam medis anabul Anda</span>
             </div>
         </GuestLayout>
     );

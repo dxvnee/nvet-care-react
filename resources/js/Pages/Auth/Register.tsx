@@ -29,22 +29,9 @@ export default function Register() {
         <GuestLayout>
             <Head title="Daftar Akun - Nvet Care" />
 
-            {/* Auth Mode Switcher Tab */}
-            <div className="mb-6 grid grid-cols-2 rounded-2xl bg-nvet-bg p-1 text-center text-sm font-medium">
-                <Link
-                    href={route('login')}
-                    className="flex items-center justify-center rounded-xl py-2 text-stone-600 transition-colors hover:text-nvet-dark hover:bg-white/60"
-                >
-                    Masuk
-                </Link>
-                <span className="flex items-center justify-center rounded-xl bg-nvet-dark py-2 text-white shadow-sm shadow-nvet-dark/20 font-semibold">
-                    Daftar Akun
-                </span>
-            </div>
-
             {/* Header Titles */}
             <div className="mb-6">
-                <h2 className="text-2xl font-bold tracking-tight text-nvet-dark">
+                <h2 className="font-heading text-xl font-bold tracking-tight text-nvet-dark">
                     Buat Akun Nvet Care 🐾
                 </h2>
                 <p className="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
@@ -55,7 +42,7 @@ export default function Register() {
             <form onSubmit={submit} className="space-y-4">
                 {/* Name Field */}
                 <div>
-                    <InputLabel htmlFor="name" value="Nama Lengkap" className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-nvet-dark" />
+                    <InputLabel htmlFor="name" value="Nama Lengkap" />
 
                     <div className="relative">
                         <TextInput
@@ -81,7 +68,7 @@ export default function Register() {
 
                 {/* Email Field */}
                 <div>
-                    <InputLabel htmlFor="email" value="Alamat Email" className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-nvet-dark" />
+                    <InputLabel htmlFor="email" value="Alamat Email" className="mb-1" />
 
                     <div className="relative">
                         <TextInput
@@ -107,7 +94,7 @@ export default function Register() {
 
                 {/* Password Field */}
                 <div>
-                    <InputLabel htmlFor="password" value="Kata Sandi" className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-nvet-dark" />
+                    <InputLabel htmlFor="password" value="Kata Sandi" />
 
                     <div className="relative">
                         <TextInput
@@ -143,12 +130,11 @@ export default function Register() {
                     <InputError message={errors.password} className="mt-1.5 text-xs" />
                 </div>
 
-                {/* Password Confirmation Field */}
+                {/* Password Confirmation */}
                 <div>
                     <InputLabel
                         htmlFor="password_confirmation"
                         value="Konfirmasi Kata Sandi"
-                        className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-nvet-dark"
                     />
 
                     <div className="relative">
@@ -193,7 +179,7 @@ export default function Register() {
                 {/* Submit Button */}
                 <div className="pt-2">
                     <PrimaryButton
-                        className="w-full py-3 text-sm font-semibold shadow-md shadow-nvet-dark/15"
+                        className="font-heading w-full py-3 text-sm font-semibold shadow-md shadow-nvet-dark/15"
                         disabled={processing}
                     >
                         {processing ? (
@@ -205,13 +191,13 @@ export default function Register() {
                                 <span>Mendaftarkan Akun...</span>
                             </span>
                         ) : (
-                            'Daftar Akun Baru'
+                            'Daftar'
                         )}
                     </PrimaryButton>
                 </div>
             </form>
 
-            {/* Bottom Login Prompt */}
+            {/* Bottom Login */}
             <div className="mt-6 border-t border-stone-100 pt-5 text-center text-xs sm:text-sm text-stone-600">
                 <span>Sudah memiliki akun Nvet Care? </span>
                 <Link
@@ -222,13 +208,6 @@ export default function Register() {
                 </Link>
             </div>
 
-            {/* Subtle Green Trust Note */}
-            <div className="mt-4 flex items-center justify-center gap-2 rounded-xl border border-nvet-green/20 bg-nvet-green-light/60 p-2.5 text-[11px] text-nvet-green">
-                <svg className="h-3.5 w-3.5 shrink-0 text-nvet-green" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Akun Anda terhubung langsung dengan rekam medis dokter hewan resmi</span>
-            </div>
         </GuestLayout>
     );
 }

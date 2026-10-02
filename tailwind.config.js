@@ -13,7 +13,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['"Lato"', ...defaultTheme.fontFamily.sans],
+                heading: ['"Faculty Glyphic"', ...defaultTheme.fontFamily.serif],
             },
             colors: {
                 nvet: {
