@@ -1,5 +1,5 @@
-import logo from '../../images/logo.png';
 import { ImgHTMLAttributes } from 'react';
+import logo from '../../images/logo.png';
 
 export default function ApplicationLogo({
     className = '',
@@ -15,4 +15,3 @@ export default function ApplicationLogo({
         />
     );
 }
-

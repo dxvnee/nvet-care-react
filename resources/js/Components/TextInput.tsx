@@ -32,7 +32,7 @@ export default forwardRef(function TextInput(
             {...props}
             type={type}
             className={
-                'block w-full rounded-xl border-stone-200 bg-white px-3.5 py-2.5 text-sm text-nvet-text placeholder:text-stone-400 shadow-sm transition-all duration-150 focus:border-nvet-primary focus:outline-none focus:ring-2 focus:ring-nvet-primary/20 ' +
+                'block w-full rounded-xl border-stone-200 bg-white px-3.5 py-2.5 text-sm text-nvet-text shadow-sm transition-all duration-150 placeholder:text-stone-400 focus:border-nvet-primary focus:outline-none focus:ring-2 focus:ring-nvet-primary/20 ' +
                 className
             }
             ref={localRef}
